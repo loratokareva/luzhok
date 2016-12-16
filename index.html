@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сайт Лужок на bootstrap</title>
+    <link rel="shortcut icon" href="/luzhok/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/common/bootstrap/css/bootstrap-social.css">
+
+
+    <link rel="stylesheet" href="/common/jquery/css/jquery-ui.css">
+    <script src="/common/jquery/js/jquery-1.12.4.js"></script>
+    <script src="/common/jquery/js/jquery-ui.js"></script>
+
+    <script src="/common/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+    <!--[if lt IE 9]>
+    <script src="/common/js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/luzhok/style/luzhok.css">
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+            $('[data-toggle="tooltip"]').tooltip();
+
+            //модальное окно
+            $("#dialog-message").dialog({
+                modal: true,
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+
+<body class="olive">
+<div id="dialog-message" title="Что реализовано на этом сайте">
+    <p>
+        Ссылки по сайту ведут на текущую страницу и на нажатие демонстрируют  описанные ниже  эффекты.
+    </p>
+
+    <h5>
+        При клике на раздел в горизонтальном меню изменяются:
+    </h5>
+    <ul>
+        <li>фоновый цветок справа</li>
+        <li>меню при раскрытии слева(аккордеон)</li>
+        <li>ссылки и разделы</li>
+        <li>breadcrumb</li>
+    </ul>
+
+    <h5>
+        Анонсы статей:
+    </h5>
+    <ul>
+        <li>ссылка "подробнее" раскрывает по принципу аккордеон</li>
+        <li> "подробнее" меняется на "свернуть"</li>
+    </ul>
+</div>
+
+<div class="visible-print">
+    <pre>
+        Самая полная иллюстрированная энциклопедия растений.
+        Советы ведущих флористов. Ландшафтный и интерьерный  дизайн.
+        URL: <i id="pageHref"><script>document.write(location.href)</script></i>
+    </pre>
+</div>
+
+<a name="up"></a>
+<header class="header-main hidden-print">
+    <a href="#" id="logo" title="Сайт Лужок на bootstrap"></a>
+    <!-- поиск по сайту -->
+    <div class="header-main-search">
+        <form class="form-inline" role="form">
+            <button type="submit" class="btn"></button>
+            <div class="form-group">
+                <input type="search" class="form-control user-height" id="searchtext">
+                <label class="control-label" for="searchtext"></label>
+            </div>
+        </form>
+    </div>
+    <!-- поиск по сайту -->
+    <!-- рекламный блок-->
+    <div class="header-main-advertising">
+        <img src="/luzhok/pics/banner.png" width="468" height="60">
+    </div>
+    <!-- /рекламный блок-->
+    <!-- main menu -->
+    <nav class="header-main-menu">
+        <ul>
+            <li data-toggle="tooltip" data-placement="bottom"
+                title="Если кликнуть, сменится расветка по сайту"><label for="color-rose" class="color page1"></label>
+            </li>
+            <li><label for="color-blue" class="color page2"></label></li>
+            <li><label for="color-aquamarine" class="color page3"></label></li>
+            <li><label for="color-purple" class="color page4"></label></li>
+            <li><label for="color-yellow" class="color page5"></label></li>
+            <li><label for="color-olive" class="color page6"></label></li>
+        </ul>
+    </nav>
+    <!-- /main menu -->
+
+    <div class="header-main-flowers">
+
+        <!-- дополнительное меню -->
+        <div class="header-main-more-menu">
+            <ul class="list-inline">
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Форум</a></li>
+                <li><a href="#">Карта сайта</a></li>
+                <li><a href="#">Пишите нам</a></li>
+            </ul>
+        </div>
+        <!-- /дополнительное меню -->
+
+    </div>
+</header>
+
+
+<main class="container-fluid">
+    <div class="row  bg-left padding-margin-zero">
+        <!-- левая колонка-->
+        <aside id="accordion-sidepanel-left" class="sidepanel-left">
+            <!-- ссылки на разделы -->
+            <!-- 1 -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion-sidepanel-left" href="#collapse-left-menu-1">
+                        Cоветы лужковца
+                    </a>
+                </div>
+                <!-- read more-->
+                <div id="collapse-left-menu-1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Где искать</a></li>
+                            <li><a href="#">Как копать</a></li>
+                            <li><a href="#">Чем поливать</a></li>
+                            <li><a href="#">Во что сажать</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /read more-->
+            </div>
+            <!-- /1 -->
+            <!-- 2 -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion-sidepanel-left" href="#collapse-left-menu-2">
+                        Декоративные
+                    </a>
+                </div>
+                <!-- read more-->
+                <div id="collapse-left-menu-2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Аглаонема скромная</a></li>
+                            <li><a href="#">Бокарнея отогнутая</a></li>
+                            <li><a href="#">Криптантус бесстебельный </a></li>
+                            <li><a href="#">Пеперомия магнолиелистная </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /read more-->
+
+            </div>
+            <!-- /2 -->
+            <!-- 3 -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion-sidepanel-left" href="#collapse-left-menu-3">
+                        Красивоцветущие
+                    </a>
+                </div>
+                <!-- read more-->
+                <div id="collapse-left-menu-3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Садовые растения</a></li>
+                            <li><a href="#">Комнатные растения</a></li>
+                            <li><a href="#">Модная клумба</a></li>
+                            <li><a href="#">Забытое старое</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /read more-->
+
+            </div>
+            <!-- /3 -->
+            <!-- 4 -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion-sidepanel-left" href="#collapse-left-menu-4">
+                        Уход за растениями
+                    </a>
+                </div>
+                <!-- read more-->
+                <div id="collapse-left-menu-4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Размножение, выращивание</a></li>
+                            <li><a href="#">Найди вредителя</a></li>
+                            <li><a href="#">Бактерии, грибы и вирусы</a></li>
+                            <li><a href="#">Основные вредители</a></li>
+                            <li><a href="#">Случайные вредители</a></li>
+                            <li><a href="#">Прочие повреждения</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /read more-->
+
+            </div>
+            <!-- /4 -->
+
+            <!-- 4 -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion-sidepanel-left" href="#collapse-left-menu-5">
+                        Полезные ссылки
+                    </a>
+                </div>
+                <!-- read more-->
+                <div id="collapse-left-menu-5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Ботанические сады</a></li>
+                            <li><a href="#">Садовые и дикие растения</a></li>
+                            <li><a href="#">Ссылки по группам растений</a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /read more-->
+
+            </div>
+            <!-- /4 -->
+            <!-- /ссылки на разделы -->
+
+
+            <div class="text-center padding-top hidden-print">
+                <img src="/luzhok/pics/banner0.png" alt="">
+            </div>
+
+
+            <div class="padding-top hidden-print" id="datepicker"></div>
+
+
+            <form name="chooseColor">
+                <div class="form-group">
+                    <input id="color-rose" type="radio" name="colorChange" value="rose" hidden>
+                    <input id="color-blue" type="radio" name="colorChange" value="blue" hidden>
+                    <input id="color-aquamarine" type="radio" name="colorChange" value="aquamarine" hidden>
+                    <input id="color-purple" type="radio" name="colorChange" value="purple" hidden>
+                    <input id="color-yellow" type="radio" name="colorChange" value="yellow" hidden>
+                    <input id="color-olive" type="radio" name="colorChange" value="olive" hidden>
+                </div>
+            </form>
+
+
+        </aside>
+        <!-- /левая колонка-->
+        <!-- часть без левой колонки-->
+        <section class="center-add-left">
+            <!--хлебные крошки-->
+            <aside class="col-md-12 text-right">
+                <ol class="breadcrumb path">
+                    <li><a href="#">Лужок</a></li>
+                    <li><a href="#">Энциклопедия декоративных растений</a></li>
+                    <li><a href="#">Модная клумба</a></li>
+                    <li class="active">Кактусы</li>
+                </ol>
+            </aside>
+            <!--/хлебные крошки-->
+            <!-- рекламный блок  -->
+            <div class="col-md-12">
+                <div class="container-advertising-text">
+                    Очень важный рекламный болк, невозможно без него открывать страницу. Такой важный что даже <a
+                        href="#">возможны ссылки</a> по тексту.
+                </div>
+            </div>
+            <!-- /рекламный блок  -->
+            <!--  горизонтальное меню -->
+            <nav class="col-md-12">
+                <header class="bread-crumb">
+                    <a href="#">Энциклопедия декоративных растений</a>
+                </header>
+                <ol class="breadcrumb main">
+                    <li><a href="#">Автофлористика</a></li>
+                    <li class="active">Ботанические сады и парки</li>
+                    <li><a href="#">Весенние праздники</a></li>
+                    <li><a href="#">Галерея художников</a></li>
+                    <li><a href="#">Икэбана</a></li>
+                    <li><a href="#">Как встретить Новый Год</a></li>
+                    <li><a href="#">Конкурс "Первый Цветок Лужка"</a></li>
+                    <li><a href="#">Крымские зарисовки</a></li>
+                </ol>
+            </nav>
+            <!--  /горизонтальное меню -->
+            <!-- центральная часть с правой колонкой-->
+            <section class="col-md-12">
+
+                <div class="row">
+                    <!-- article -->
+                    <article class="col-sm-12 col-md-9 text-justify">
+                        <header>
+                            <h1 class="header-page">
+                                Растения ломающие камни
+
+                                <a href="#" onClick="window.print()"><span class="fa fa-print"></span></a>
+                            </h1>
+                        </header>
+
+                        <p>
+                            Камнеломки - влаголюбивые растения, но избытка влаги они не переносят. Засуха приносит им
+                            меньше вреда, чем лишняя вода. Что касается освещения, то эти растения терпимы к любым
+                            условиям. Они великолепно растут на открытом солнце, а в тени развивают крупные, но рыхлые
+                            по структуре кочки-дернины и практически не цветут. Лучший вариант - полутень, особенно в
+                            жаркие дневные часы, а у пестролистных сортов более четкий узор на листьях бывает при
+                            утреннем и вечернем солнечном освещении.
+                        </p>
+                        <p>
+                            Множество видов камнеломок растет в холодном и умеренном климате Северного полушария. Все
+                            камнеломки — травы, и большинство их поселилось в горах Азии, Европы и Америки, Арктики.
+                            Почти все камнеломки любят влагу, но есть и устойчивые к засухе. Очень многие из них красиво
+                            цветут и их выращивают как декоративные растения. Рано весной зацветают астильбе,
+                            пельтифиллум, геухера. У них крупные соцветия, похожие на метелку, зонтик или кисть, а
+                            цветки — белые, розовые или красные. В высокогорьях из своих розеток камнеломки образуют
+                            целые подушки, до метра в диаметре. Весной эти подушки сплошь покрываются желтыми, белыми,
+                            красными, розовыми цветками.
+                        </p>
+
+
+                        <section class="panel-group" id="accordion-article">
+                            <!-- панель 1 -->
+                            <article class="panel panel-default article-part">
+                                <div class="panel-heading">
+                                    <!-- preview -->
+                                    <div class="article-preview">
+                                        <img src="/luzhok/pics/pic1.jpg" alt="" class="img-rounded" data-toggle="modal"
+                                             data-target="#myModal">
+                                    </div>
+                                    <!-- /preview -->
+                                    <!-- modal window -->
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="ModalWindow-1" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="ModalWindow-1">Заячья капуста или
+                                                        молодило</h4>
+                                                </div>
+                                                <figure class="modal-body modal-search-plus text-center">
+                                                    <p><img src="/luzhok/pics/pic1.jpg" class="img-responsive"></p>
+                                                    <figcaption class="text-right">
+                                                        Автор снимка: Иванов И.В.
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /modal window -->
+                                    <!--  announcement -->
+                                    <div class="article-announcement">
+                                        <header>
+                                            <h3>
+                                                Заячья капуста или молодило
+                                            </h3>
+                                            <time datetime="02 октября 2011" class="text-muted">
+                                                <span class="fa fa-calendar fa-1x"></span>
+                                                Дата публикации: 02 октября 2011
+                                            </time>
+                                        </header>
+                                        <p>Молодило относится к семейству толстянковых (Crassulaceae), включая в себя
+                                            примерно 40 видов и несметное количество сортов. К этому же семейству
+                                            относится и большинство известных комнатных суккулентов, а потому и молодило
+                                            можно успешно выращивать как комнатное растение. Но об этом чуть
+                                            позже...</p>
+                                        <p>Кстати, современные мужчины – не первые, кого это растение так впечатляет.
+                                            Ещё в указах Карла Великого встречается упоминание о необходимости разводить
+                                            молодило на крышах (ему достаточно слоя почвы всего в нескольких
+                                            сантиметров!) в качестве... громоотвода! Дело в том, что в давние времена
+                                            молодило считалось растением, посвящённым богу-громовержцу Тору. </p>
+
+                                    </div>
+                                    <!--  /announcement -->
+                                </div>
+                                <!-- read more-->
+                                <div id="collapse-1" class="panel-collapse collapse article-collapse">
+
+                                    <p>Выносливость и неприхотливость молодила связана с оригинальным строением этого
+                                        растения. В среднем каждая его розетка состоит из нескольких десятков толстых,
+                                        сочных листьев, отходящих от короткого стебля. В течение вегетационного периода
+                                        от вершины отрастают, располагаясь по спирали, новые листья. А старые листья на
+                                        поверхности почвы постепенно засыхают и отмирают.</p>
+                                    <p>В листьях молодило накапливает влагу и питательные вещества. К тому же, у
+                                        некоторых видов молодила листья снабжены паутинкой из белых волосков, на которых
+                                        во время тумана конденсируется влага из воздуха. Вот почему эти растениям не
+                                        страшна летняя засуха. У всех видов молодила листья покрыты плотной кожицей, что
+                                        тоже препятствует испарению влаги.</p>
+                                    <p>Размножается молодило тоже очень необычно: в пазухах листьев образуется отпрыски,
+                                        соединённые с маточным растением прочными тоненькими стебельками. Стебелёк
+                                        растёт до тех пор, пока дочерняя розетка не коснётся поверхности почвы и не
+                                        начнёт укореняться. При высокой влажности воздуха от детки отрастает масса
+                                        воздушных корней даже без касания с почвой.</p>
+                                    <p>Через некоторое время возле материнского растения образуется целое гнездо
+                                        деток.</p>
+                                </div>
+                                <!-- /read more-->
+
+                                <footer class="clearfix">
+                                    <a class="pull-right" data-toggle="collapse" data-parent="#accordion-article"
+                                       href="#collapse-1">подробнее</a>
+                                    <p class="pull-left"> Источник: Лужок.ру</p>
+                                </footer>
+
+                            </article>
+                            <!-- /панель 3 -->
+                            <!-- панель 2 -->
+                            <article class="panel panel-default article-part">
+                                <div class="panel-heading">
+                                    <!-- preview -->
+                                    <div class="article-preview">
+                                        <img src="/luzhok/pics/pic2.jpg" alt="" class="img-rounded" data-toggle="modal"
+                                             data-target="#myModa2">
+                                    </div>
+                                    <!-- /preview -->
+                                    <!-- modal window -->
+                                    <div class="modal fade" id="myModa2" tabindex="-1" role="dialog"
+                                         aria-labelledby="ModalWindow-2" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="ModalWindow-2">Ломающие камни</h4>
+                                                </div>
+                                                <figure class="modal-body modal-search-plus text-center">
+                                                    <p><img src="/luzhok/pics/pic2.jpg" class="img-responsive"></p>
+                                                    <figcaption class="text-right">
+                                                        Автор снимка: Петров И.В.
+                                                    </figcaption>
+                                                </figure>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /modal window -->
+                                    <!--  announcement -->
+                                    <div class="article-announcement">
+                                        <header>
+                                            <h3>
+                                                Ломающие камни
+                                            </h3>
+                                            <time datetime="02 октября 2011" class="text-muted">
+                                                <span class="fa fa-calendar fa-1x"></span>
+                                                Дата публикации: 02 октября 2011
+                                            </time>
+                                        </header>
+                                        <p>У этих почвопокровных растений красивы и вечнозеленая листва, и белые,
+                                            розовые или красные цветки. А
+                                            сами они образуют плотные, яркие ковры. Называются растения камнеломками. В
+                                            последнее время они
+                                            приобретают все большую популярность как у начинающих садоводов, так и у
+                                            опытных.</p>
+                                        <p>В диком виде камнеломки произрастают в горах, на бедных почвах и ярком
+                                            солнце. Но в саду многие виды
+                                            предпочитают умеренно влажные, богатые гумусом почвы и полутенистое
+                                            местоположение.</p>
+                                    </div>
+                                    <!--  /announcement -->
+                                </div>
+                                <!-- read more-->
+                                <div id="collapse-2" class="panel-collapse collapse article-collapse">
+                                    <p>
+                                        Период декоративности у камнеломок растянут во времени и в зависимости от
+                                        разновидности начинается с таянием снега, достигает своего пика в разгар весны,
+                                        продолжается летом и заканчивается осенью, когда пестролистные сорта уходят под
+                                        снег прямо с кожистыми розетками листьев, похожими на невиданные сказочные
+                                        букеты. Чаще всего камнеломки используют в качестве почвопокровных растений, для
+                                        создания вечнозеленых ковров и плотных низких
+                                    </p>
+                                    <p>
+                                        Камнеломки - влаголюбивые растения, но избытка влаги они не переносят. Засуха
+                                        приносит им меньше вреда, чем лишняя вода. Что касается освещения, то эти
+                                        растения терпимы к любым условиям. Они великолепно растут на открытом солнце, а
+                                        в тени развивают крупные, но рыхлые по структуре кочки-дернины и практически не
+                                        цветут. Лучший вариант - полутень, особенно в жаркие дневные часы, а у
+                                        пестролистных сортов более четкий узор на листьях бывает при утреннем и вечернем
+                                        солнечном освещении.
+                                    </p>
+
+                                </div>
+                                <!-- /read more-->
+
+                                <footer class="clearfix">
+                                    <a class="pull-right" data-toggle="collapse" data-parent="#accordion-article"
+                                       href="#collapse-2">подробнее</a>
+                                    <p class="pull-left"> Источник: Северный дачник</p>
+                                </footer>
+
+                            </article>
+                            <!-- /панель 2 -->
+                            <!-- панель 3 -->
+                            <article class="panel panel-default article-part">
+                                <div class="panel-heading">
+                                    <!-- preview -->
+                                    <div class="article-preview">
+                                        <img src="/luzhok/pics/pic3.jpg" alt="" class="img-rounded" data-toggle="modal"
+                                             data-target="#myModa3">
+                                    </div>
+                                    <!-- /preview -->
+                                    <!-- modal window -->
+                                    <div class="modal fade" id="myModa3" tabindex="-1" role="dialog"
+                                         aria-labelledby="ModalWindow-3" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="ModalWindow-3">Бедренец камнеломка</h4>
+                                                </div>
+                                                <figure class="modal-body modal-search-plus text-center">
+                                                    <p><img src="/luzhok/pics/pic3.jpg" class="img-responsive"></p>
+                                                    <figcaption class="text-right">
+                                                        Автор снимка: Сидоров И.В.
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /modal window -->
+                                    <!--  announcement -->
+                                    <div class="article-announcement">
+                                        <header>
+                                            <h3>
+                                                Бедренец камнеломка
+                                            </h3>
+                                            <time datetime="02 октября 2011" class="text-muted">
+                                                <span class="fa fa-calendar fa-1x"></span>
+                                                Дата публикации: 02 октября 2011
+                                            </time>
+                                        </header>
+                                        <p>Бедренец-камнеломка относится к многолетнему виду растения, семейство
+                                            камнеломковые, отличается
+                                            сложной корневой системой, листья у нее
+                                            являются ползущими, могут расти от корня, и образовывают розетку.
+                                            Литься имеют мясистую, кожистую, бархатистую и округлую поверхность,
+                                            отличаются сероватым налетом,
+                                            потому оно часто выделяет известь.</p>
+
+                                        <p>Цвести растение начинает в конце весны по конец лета, имеет белый, малиновый,
+                                            желтый и розовый цвет.
+                                            Имеют пять лепестков, которые собираются в зонтичное и метельчатое соцветие.
+                                            В начале осени
+                                            появляется плод, который является коробочкой, в которой содержится большее
+                                            количество семян.</p>
+                                    </div>
+                                    <!--  /announcement -->
+                                </div>
+                                <!-- read more-->
+                                <div id="collapse-3" class="panel-collapse collapse article-collapse">
+
+                                    <p>Выносливость и неприхотливость молодила связана с оригинальным строением этого
+                                        растения. В среднем каждая его розетка состоит из нескольких десятков толстых,
+                                        сочных листьев, отходящих от короткого стебля. В течение вегетационного периода
+                                        от вершины отрастают, располагаясь по спирали, новые листья. А старые листья на
+                                        поверхности почвы постепенно засыхают и отмирают.</p>
+                                    <p>В листьях молодило накапливает влагу и питательные вещества. К тому же, у
+                                        некоторых видов молодила листья снабжены паутинкой из белых волосков, на которых
+                                        во время тумана конденсируется влага из воздуха. Вот почему эти растениям не
+                                        страшна летняя засуха. У всех видов молодила листья покрыты плотной кожицей, что
+                                        тоже препятствует испарению влаги.</p>
+                                    <p>Размножается молодило тоже очень необычно: в пазухах листьев образуется отпрыски,
+                                        соединённые с маточным растением прочными тоненькими стебельками. Стебелёк
+                                        растёт до тех пор, пока дочерняя розетка не коснётся поверхности почвы и не
+                                        начнёт укореняться. При высокой влажности воздуха от детки отрастает масса
+                                        воздушных корней даже без касания с почвой.</p>
+
+                                </div>
+                                <!-- /read more-->
+
+                                <footer class="clearfix">
+                                    <a class="pull-right" data-toggle="collapse" data-parent="#accordion-article"
+                                       href="#collapse-3">подробнее</a>
+                                    <p class="pull-left"> Источник: medportal.su</p>
+                                </footer>
+
+                            </article>
+                            <!-- /панель 3 -->
+                        </section>
+
+                        <!-- блок соц.сетей-->
+                        <section class="social-link-block hidden-print">
+                            <script type="text/javascript">
+                                document.write(VK.Share.button({
+                                    url: 'http://lujok.ru/encyclop/',
+                                    title: 'Бедренец камнеломка',
+                                    description: 'Самая полная иллюстрированная энциклопедия растений.',
+                                    image: 'http://lujok.ru/pics/art19/art1883_0.jpg',
+                                    noparse: false
+                                }, {
+                                    type: 'custom',
+                                    text: '<span class="btn btn-social-icon btn-vk btn-xs"><span class="fa fa-vk"></span></span>'
+                                }));
+                            </script>
+
+                            <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.lujok.ru" target="_blank"
+                               class="btn btn-social-icon btn-facebook btn-xs">
+                                <span class="fa fa-facebook"></span>
+                            </a>
+                            <a href="http://twitter.com/home?status=%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20http%3A%2F%2Fwww.lujok.ru"
+                               class="btn btn-social-icon btn-twitter btn-xs">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+
+                        </section>
+                        <!-- /блок соц.сетей-->
+
+
+                        <!-- блок обсуждений -->
+                        <aside class="comments hidden-print">
+
+                            <header class="comments-title">
+                                Обсуждение материала страницы
+                                <a href="#comments-form" class="pull-right small-text">
+                                    написать сообщение
+                                    <span class="fa fa-caret-down fa-1x"></span>
+                                </a>
+                            </header>
+                            <!-- комментарий 1  -->
+                            <aticle class="comments-block">
+
+                                <div class="comments-avatar">
+                                    <img src="/luzhok/pics/avatar-1.jpg" alt="">
+                                </div>
+                                <div class="comments-body">
+
+                                    <div class="panel border">
+                                        <div class="panel-heading">
+                                            <span class="panel-autor">Александр</span>
+                                            <time datetime="02 октября 2011" class="text-muted pull-right">
+                                                <span class="fa fa-calendar fa-1x"></span>
+                                                Дата публикации: 02 октября 2011
+                                            </time>
+                                        </div>
+                                        <div class="panel-body">
+                                            <h3 class="panel-title">Отзыв о работе интернет-магазина</h3>
+                                            Дважды пользовалась услугами этого инернет-магазина. Осталась очень
+                                            довольна. Цены ниже, обслуживание оперативное, доставка отличная. Всё
+                                            доставили, распаковали - показали товар лицом. Помогли установить на нужное
+                                            место. Менеджеры и курьеры внимательные и вежливые. Рекомендую всем! И сама
+                                            непременно воспользуюсь ещё услугами этого интернет-магазина.
+                                        </div>
+                                        <div class="panel-footer">
+                                            <a href="#" class="message-close pull-right">Удалить</a>
+                                            <div class="answer">
+                                                <span class="fa fa-share fa-1x pull-left pull-left"></span>
+                                                <a href="#">Ответить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ответ 1-го уровня -->
+                                    <aticle class="comments-block">
+
+                                        <div class="comments-avatar">
+                                            <img src="/luzhok/pics/avatar-2.jpg" alt="">
+                                        </div>
+                                        <div class="comments-body">
+
+                                            <div class="panel border">
+                                                <div class="panel-heading">
+                                                    <span class="panel-autor">Виолетта</span>
+                                                    <time datetime="02 октября 2011" class="text-muted pull-right">
+                                                        <span class="fa fa-calendar fa-1x"></span>
+                                                        Дата публикации: 12 мая 2017
+                                                    </time>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <h3 class="panel-title">Мои впечатления и советы</h3>
+                                                    Уже неоднократно пользовался услугами этого магазина. Покупал в
+                                                    основном холодильники. Очень удобная система выбора, можно подобрать
+                                                    холодильник по всем необходимым параметрам. Удобная доставка,
+                                                    вежливые менеджеры. Вобщем у меня проблем с этим магазином не было.
+                                                    Рекомендую!
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <a href="#" class="message-close pull-right">Удалить</a>
+                                                    <div class="answer">
+                                                        <span class="fa fa-share fa-1x pull-left"></span>
+                                                        <a href="#">Ответить</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- ответ 2-го уровня -->
+                                            <aticle class="comments-block">
+
+                                                <div class="comments-avatar">
+                                                    <img src="/luzhok/pics/avatar-3.jpg" alt="">
+                                                </div>
+                                                <div class="comments-body">
+
+                                                    <div class="panel border">
+                                                        <div class="panel-heading">
+                                                            <span class="panel-autor">Сергей</span>
+                                                            <time datetime="02 октября 2011"
+                                                                  class="text-muted pull-right">
+                                                                <span class="fa fa-calendar fa-1x"></span>
+                                                                Дата публикации: 12 мая 2017
+                                                            </time>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <h3 class="panel-title">Удобство заказа</h3>
+                                                            Покупал две вещи в один заказ, менеджер сразу посоветовал
+                                                            заказы разделить, чтоб получить скидку. За это ему отдельное
+                                                            спасибо. На сайте заказывать легко и просто, служба
+                                                            связывается оперативно. Покупал самовывозом, с поиском
+                                                            магазина на Пулковском шоссе проблем нет. Спасибо
+                                                        </div>
+                                                        <div class="panel-footer">
+                                                            <a href="#" class="message-close pull-right">Удалить</a>
+                                                            <div class="answer">
+                                                                <span class="fa fa-share fa-1x pull-left"></span>
+                                                                <a href="#">Ответить</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </aticle>
+                                            <!-- /ответ 2-го уровня -->
+
+
+                                        </div>
+
+                                    </aticle>
+                                    <!-- /ответ 1-го уровня -->
+
+
+                                </div>
+
+                            </aticle>
+                            <!-- /комментарий 1  -->
+
+                            <!-- комментарий 2  -->
+                            <aticle class="comments-block">
+                                <div class="comments-avatar">
+                                    <img src="/luzhok/pics/avatar-4.jpg" alt="">
+                                </div>
+                                <div class="comments-body">
+
+                                    <div class="panel border">
+                                        <div class="panel-heading">
+                                            <span class="panel-autor">Евгения</span>
+                                            <time datetime="02 октября 2011" class="text-muted pull-right">
+                                                <span class="fa fa-calendar fa-1x"></span>
+                                                Дата публикации: 09 октября 2015
+                                            </time>
+                                        </div>
+                                        <div class="panel-body">
+                                            <h3 class="panel-title">Мой личный опыт</h3>
+                                            Пока что единственная покупка - мини-холодильник без компрессора. В местных
+                                            магазинах как-то не попадался такой на глаза, а здесь сразу нашел несколько
+                                            вариантов и выбрал понравившийся. Удобно что можно покрутить изображение со
+                                            всех сторон. Оформление несложное. Доставка не задержалась. Оплачивал при
+                                            получении, т. к. первый раз брал в этом магазине.
+                                        </div>
+                                        <div class="panel-footer">
+                                            <a href="#" class="message-close pull-right">Удалить</a>
+                                            <div class="answer">
+                                                <span class="fa fa-share fa-1x pull-left"></span>
+                                                <a href="#">Ответить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ответ 1-го уровня -->
+                                    <aticle class="comments-block">
+                                        <div class="comments-avatar">
+                                            <img src="/luzhok/pics/avatar-5.jpg" alt="">
+                                        </div>
+                                        <div class="comments-body">
+                                            <div class="panel border">
+                                                <div class="panel-heading">
+                                                    <span class="panel-autor">Марчелла</span>
+                                                    <time datetime="02 октября 2011" class="text-muted pull-right">
+                                                        <span class="fa fa-calendar fa-1x"></span>
+                                                        Дата публикации: 12 мая 2017
+                                                    </time>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <h3 class="panel-title">Мои впечатления и советы</h3>
+                                                    Заказал товар вечером, самовывозом(в других магазинах этого товара,
+                                                    по такой цене вообще нет) отзвонились оперативно, молодцы. Утром
+                                                    приехал, сначала все показали, потом только оплатил, очень доволен,
+                                                    спасибо!!!
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <a href="#" class="message-close pull-right">Удалить</a>
+                                                    <div class="answer">
+                                                        <span class="fa fa-share fa-1x pull-left"></span>
+                                                        <a href="#">Ответить</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </aticle>
+                                    <!-- /ответ 1-го уровня -->
+
+
+                                </div>
+
+                            </aticle>
+                            <!-- /комментарий 2  -->
+
+
+                        </aside>
+
+                        <!-- форма -->
+                        <section class="comments-form hidden-print">
+
+                            <div class="panel-group" id="accordion-form">
+                                <!-- 1 панель -->
+                                <div class="panel">
+                                    <!-- Заголовок 1 панели -->
+
+                                    <a name="comments-form" data-toggle="collapse" data-parent="#accordion-form"
+                                       href="#collapseOne">
+                                        Форма отправки сообщения
+                                        <span class="fa fa-caret-down fa-1x"></span>
+                                    </a>
+
+                                    <div id="collapseOne" class="panel-collapse collapse">
+
+                                        <form class="form-horizontal" action="">
+
+                                            <fieldset>
+
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <span class="help-block">Чтобы оставить сообщение Вам необходимо авторизоваться.</span>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                    <span class="fa fa-at fa-1x"></span>
+                                                </span>
+                                                            <input type="email" class="form-control"
+                                                                   placeholder="Адрес электронной почты">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <span class="fa fa-key fa-1x"></span>
+                                                        </span>
+                                                            <input type="text" class="form-control"
+                                                                   placeholder="Пароль">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </fieldset>
+                                            <fieldset disabled="disabled">
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <span class="fa fa-user fa-1x"></span>
+                                                        </span>
+                                                            <input type="text" class="form-control"
+                                                                   placeholder="Ваше имя">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <span class="fa fa-info fa-1x"></span>
+                                                        </span>
+                                                            <input type="text" class="form-control"
+                                                                   placeholder="Тема сообщения">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <textarea class="form-control"
+                                                                  placeholder="Текст Вашего сообщения"></textarea>
+                                                        <span class="help-block">ВНИМАНИЕ! Сообщение не относящееся к теме страницы, будет перемещено или удалено</span>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <button type="submit" class="btn btn-default" disabled="disabled">
+                                                        <span class="fa fa-comment fa-1x"></span>
+                                                        Отправить комментарий
+                                                    </button>
+                                                    <button type="reset" class="btn btn-default">
+                                                        <span class="fa fa-trash fa-1x"></span>
+                                                        Очистить форму
+                                                    </button>
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </section>
+                        <!-- форма -->
+                        <!-- /блок обсуждений -->
+
+
+                    </article>
+                    <!-- /article -->
+                    <!-- right block site-->
+                    <div class="col-sm-12 col-md-3 hidden-print padding-top">
+                        <section class="row" id="accordion-sidepanel-right">
+
+
+                            <!-- Кроме того-->
+                            <div class="hidden-xs col-sm-12  col-md-12 panel panel-success padding-null sidepanel-right-moreover">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Кроме того</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Что-то крайне неизвестное</a></li>
+                                        <li><a href="#">Много умного даром</a></li>
+                                        <li><a href="#">Вы мечтали чтобы это узнать, но не нашли</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /Кроме того -->
+
+                            <!-- Узнай больше -->
+                            <div class="hidden-xs col-sm-12  col-md-12 panel panel-success padding-null sidepanel-right-learn-more">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Узнай больше</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Посев однолетников под зиму</a></li>
+                                        <li><a href="#">Хранение луковиц</a></li>
+                                        <li><a href="#">Если вы купили саженцы слишком поздно</a></li>
+                                        <li><a href="#">Гортензия - исправление ошибок.</a></li>
+                                        <li><a href="#">Комнатная культура лучших цветущих луковичных растений</a></li>
+                                        <li><a href="#">Композиции из растений в тени.</a></li>
+                                        <li><a href="#">Клематисы.Зеленое черенкование</a></li>
+                                        <li><a href="#">Культура редких и нежных растений в комнатах</a></li>
+                                        <li><a href="#">Клубнепочки гладиолусов</a></li>
+                                        <li><a href="#">Размножение клематисов</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /Узнай больше -->
+                            <!-- Другие статьи раздела-->
+                            <div class="hidden-xs col-sm-12 col-md-12 panel panel-success padding-null sidepanel-right-article">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-sidepanel-right"
+                                           href="#collapse-test">
+                                            Другие статьи раздела
+                                        </a>
+
+                                    </h4>
+                                </div>
+                                <!-- read more-->
+                                <div id="collapse-test" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Посев однолетников под зиму</a></li>
+                                            <li><a href="#">Хранение луковиц</a></li>
+                                            <li><a href="#">Обработка семян.</a></li>
+                                            <li><a href="#">Гортензия - исправление ошибок.</a></li>
+                                            <li><a href="#">Как поливать цветы</a></li>
+                                            <li><a href="#">Композиции из растений в тени.</a></li>
+                                            <li><a href="#">Клематисы.Зеленое черенкование</a></li>
+                                            <li><a href="#">Что влияет на зимостойкость газона</a></li>
+                                            <li><a href="#">Клубнепочки гладиолусов</a></li>
+                                            <li><a href="#">Размножение клематисов</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /read more-->
+
+                            </div>
+                            <!-- /Другие статьи раздела -->
+
+                            <!-- баннер -->
+                            <div class="col-sm-12 col-md-12 panel panel-success padding-null sidepanel-right-advertising">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-sidepanel-right"
+                                           href="#collapse-adv">
+                                            На правах рекламы
+                                        </a>
+
+                                    </h4>
+                                </div>
+                                <!-- read more-->
+                                <div id="collapse-adv" class="panel-collapse collapse">
+                                    <div class="panel-body tool">
+                                        <img src="/luzhok/pics/tool-1.png" border="0">
+                                        <img src="/luzhok/pics/tool-2.png" border="0">
+                                        <img src="/luzhok/pics/tool-3.png" border="0">
+                                        <img src="/luzhok/pics/tool-4.png" border="0">
+                                        <img src="/luzhok/pics/tool-5.png" border="0">
+                                        <img src="/luzhok/pics/tool-6.png" border="0">
+                                    </div>
+                                </div>
+                                <!-- /read more-->
+
+                            </div>
+                            <!-- /баннер -->
+                        </section>
+                    </div>
+                    <!-- /right block site-->
+                </div>
+
+
+            </section>
+            <!-- /центральная часть с правой колонкой-->
+        </section>
+        <!-- /часть без левой колонки-->
+    </div>
+</main>
+
+
+<footer class="footer-down hidden-print">
+    <div class="icon-up"><a href="#up"></a></div>
+    <div class="pull-right">
+        <!-- counters -->
+        <div class="icon-counters-list">
+
+            <div class="icon-counters">
+                <!--begin of Top100 logo-->
+                <img src="http://images.rambler.ru/top100/banner-88x31-rambler-green2.gif" alt="Rambler's Top100"
+                     width="88" height="31" border="0">
+                <!--end of Top100 logo -->
+            </div>
+            <div class="icon-counters">
+                <!--TopList COUNTER-->
+                <img src="http://top.list.ru/counter?id=172642;t=52;js=13;r=http%3A//luzhok.ru/encyclop/bed/cactuses/;j=false;s=1600*1200;d=24;rand=0.6159599372619182"
+                     alt="TopList" border="0" height="31" width="88">
+
+            </div>
+            <div class="icon-counters">
+
+                <!-- BEGIN CODE WWWomen.ru V2 -->
+                <img src="http://wwwomen.ru/php/wi.php?agent=15-4704&amp;i=0&amp;ref=bookmark" border="0" width="88"
+                     height="31" alt="WWWomen.ru WWWomen online!">
+                <!-- END CODE WWWomen.ru  -->
+
+            </div>
+            <div class="icon-counters copyright">
+                Copyright © 2001 - 2016 Project of Home.Com Corp. Portfolio.my
+            </div>
+
+
+        </div>
+        <!-- /counters -->
+
+    </div>
+</footer>
+
+
+<footer class="visible-print">
+    Copyright © 2001 - 2016 Project of Home.Com Corp. Portfolio.my
+</footer>
+
+
+<script src="/luzhok/js/luzhok.js"></script>
+
+</body>
+</html>
